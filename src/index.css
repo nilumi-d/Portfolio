@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Default = light mode */
+  body {
+    @apply bg-slate-50 text-gray-900 font-sans antialiased;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  /* Dark mode — when <html> has .dark class */
+  .dark body {
+    @apply bg-[#080b14] text-gray-100;
+  }
+
+  /* Selection — light mode: dark text on colored bg */
+  ::selection {
+    background-color: rgba(100, 120, 242, 0.25);
+    color: #3730a3;
+  }
+
+  /* Selection — dark mode */
+  .dark ::selection {
+    background-color: rgba(100, 120, 242, 0.35);
+    color: #c7d7fe;
+  }
+}
+
+@layer components {
+  /* Glass card — dark */
+  .glass-card {
+    @apply backdrop-blur-xl border border-white/10 bg-white/5;
+  }
+
+  /* Glass card — light */
+  .light-glass {
+    @apply backdrop-blur-xl border border-gray-200 bg-white/70 shadow-sm;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-400 via-accent-400 to-teal-400 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-primary {
+    @apply bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent;
+  }
+
+  .dark .gradient-text-primary {
+    @apply bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-24 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-width {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply relative inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-white
+           bg-gradient-to-r from-primary-600 to-accent-600 
+           hover:from-primary-500 hover:to-accent-500
+           shadow-glow hover:shadow-glow
+           transition-all duration-300 ease-out
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply relative inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold
+           border border-primary-500/40 text-primary-600
+           hover:bg-primary-500/10 hover:border-primary-400
+           transition-all duration-300 ease-out
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .dark .btn-secondary {
+    @apply text-primary-300 hover:text-primary-200;
+  }
+
+  .btn-outline {
+    @apply relative inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium text-sm
+           border border-gray-300 text-gray-600
+           hover:bg-gray-100 hover:border-gray-400 hover:text-gray-900
+           transition-all duration-300 ease-out;
+  }
+
+  .dark .btn-outline {
+    @apply border-white/20 text-gray-300 hover:bg-white/10 hover:border-white/40 hover:text-white;
+  }
+
+  /* Skill badge */
+  .skill-badge {
+    @apply px-4 py-2 rounded-full text-sm font-medium
+           border border-gray-200 bg-white text-gray-700
+           hover:bg-primary-50 hover:border-primary-300 hover:text-primary-700
+           transition-all duration-300 cursor-default shadow-sm;
+  }
+
+  .dark .skill-badge {
+    @apply border-white/10 bg-white/5 text-gray-300 hover:bg-primary-500/20 hover:border-primary-500/50 hover:text-primary-300;
+  }
+
+  /* Section title */
+  .section-title {
+    @apply text-4xl sm:text-5xl font-display font-bold mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg max-w-2xl;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-400/40 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-500/60;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Scroll progress bar */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #6478f2, #cc53ec, #14b8a6);
+    z-index: 9999;
+  }
+}
+
+/* Particle/blob morph animations */
+@keyframes blob {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50%       { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+}
+
+.blob {
+  animation: blob 8s ease-in-out infinite;
+}
+
+/* Gradient background cycle */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #0d1120, #1a1040, #0d2030, #111827);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
