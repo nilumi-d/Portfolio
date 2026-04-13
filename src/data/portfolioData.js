@@ -235,7 +235,7 @@ export const education = [
     id: 1,
     institution: "Sri Lanka Institute of Information Technology (SLIIT)",
     degree: "Bachelor of Science in Information Technology",
-    period: "2022 – Present",
+    period: "2023 – Present",
     cgpa: "3.90",
     highlight: true,
     achievements: [

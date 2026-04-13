@@ -10,6 +10,8 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import MouseGlow from './components/MouseGlow';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   // ThemeContext already sets the 'dark' class on <html> — no need to duplicate here.
@@ -18,6 +20,7 @@ export default function App() {
 
   return (
     <>
+      <MouseGlow />
       {/* Scroll progress bar */}
       <ScrollProgress />
 
@@ -38,6 +41,9 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
+      
+      {/* Scroll to Top FAB */}
+      <ScrollToTop />
     </>
   );
 }

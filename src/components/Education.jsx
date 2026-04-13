@@ -98,11 +98,11 @@ export default function Education() {
                     <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl bg-gradient-to-b ${ach.color}`} />
 
                     <div className="flex items-start gap-4">
-                      <div className={`flex-shrink-0 text-center px-3 py-2 rounded-xl bg-gradient-to-br ${ach.color} bg-opacity-10`}>
+                      <div className="flex-shrink-0 text-center px-3 py-2 rounded-xl dark:bg-white/[0.04] bg-gray-50 border dark:border-white/5 border-gray-100 shadow-sm">
                         <p className={`font-display font-black text-2xl bg-gradient-to-r ${ach.color} bg-clip-text text-transparent leading-none`}>
                           {ach.stat}
                         </p>
-                        <p className="text-xs dark:text-gray-500 text-gray-500 font-medium mt-0.5 whitespace-nowrap">
+                        <p className="text-xs dark:text-gray-400 text-gray-500 font-medium mt-0.5 whitespace-nowrap">
                           {ach.statLabel}
                         </p>
                       </div>

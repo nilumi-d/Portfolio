@@ -68,7 +68,7 @@ export default function Navbar() {
                         : 'dark:text-gray-400 text-gray-600 dark:hover:text-primary-400 hover:text-primary-600'
                     }`}
                   >
-                    {link.label}
+                    <span className="relative z-10">{link.label}</span>
                     {isActive && (
                       <motion.span
                         layoutId="nav-active"
