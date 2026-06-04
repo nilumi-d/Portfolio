@@ -12,6 +12,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import MouseGlow from './components/MouseGlow';
 import ScrollToTop from './components/ScrollToTop';
+import Leadership from './components/Leadership';
 
 export default function App() {
   // ThemeContext already sets the 'dark' class on <html> — no need to duplicate here.
@@ -36,6 +37,7 @@ export default function App() {
         <QA />
         <Experience />
         <Education />
+        <Leadership />
         <Contact />
       </main>
 

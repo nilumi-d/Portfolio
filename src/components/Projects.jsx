@@ -6,7 +6,7 @@ import { SectionHeader } from './ui/SectionHeader';
 import { FadeInUp, StaggerContainer, StaggerItem } from './ui/AnimateWrapper';
 import { projects } from '../data/portfolioData';
 
-const categoryFilters = ['All', 'Full-Stack', 'Web App', 'Mobile App', 'Desktop App'];
+const categoryFilters = ['All', 'Full-Stack', 'Web App', 'Mobile App'];
 
 function ProjectCard({ project, index }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -33,6 +33,22 @@ function ProjectCard({ project, index }) {
           bg-gradient-to-r from-primary-500 to-accent-500 text-white text-xs font-bold shadow-lg">
           <StarIcon className="w-3 h-3" />
           Featured
+        </div>
+      )}
+
+      {/* Team Lead badge */}
+      {project.badge && !project.highlight && (
+        <div className="absolute top-4 right-4 z-10 flex items-center gap-1 px-2.5 py-1 rounded-full
+          bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold shadow-lg">
+          👑 {project.badge}
+        </div>
+      )}
+
+      {/* Team Lead badge alongside Featured */}
+      {project.badge && project.highlight && (
+        <div className="absolute top-4 left-4 z-10 flex items-center gap-1 px-2.5 py-1 rounded-full
+          bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold shadow-lg">
+          👑 {project.badge}
         </div>
       )}
 

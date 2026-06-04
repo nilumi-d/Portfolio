@@ -57,7 +57,7 @@ export default function Education() {
                   </div>
 
                   {/* Achievement chips */}
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-5">
                     {edu.achievements.map((ach) => (
                       <span key={ach}
                         className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-semibold
@@ -70,6 +70,25 @@ export default function Education() {
                       </span>
                     ))}
                   </div>
+
+                  {/* Key modules */}
+                  {edu.modules && (
+                    <div>
+                      <p className="text-xs font-semibold dark:text-gray-500 text-gray-400 uppercase tracking-wider mb-2">Key Modules</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {edu.modules.map((mod) => (
+                          <span key={mod}
+                            className="px-2.5 py-1 rounded-lg text-xs font-medium
+                              dark:bg-white/5 bg-gray-100
+                              dark:text-gray-300 text-gray-600
+                              border dark:border-white/5 border-gray-200"
+                          >
+                            {mod}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </motion.div>
               </FadeInUp>
             ))}
