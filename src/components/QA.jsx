@@ -4,19 +4,19 @@ import { FadeInUp, StaggerContainer, StaggerItem } from './ui/AnimateWrapper';
 import { qaSkills } from '../data/portfolioData';
 
 const toolPlaceholders = [
-  { name: 'Jira',           icon: '📋', desc: 'Bug tracking & sprint planning',   status: 'Used in projects' },
   { name: 'Postman',        icon: '📮', desc: 'API testing & validation',          status: 'Used extensively' },
   { name: 'JUnit 5',        icon: '🔬', desc: 'Unit testing framework',            status: 'Active experience' },
   { name: 'Espresso',       icon: '📱', desc: 'Android UI automation',             status: 'Mobile projects' },
+  { name: 'Git & GitHub',   icon: '🌿', desc: 'Version control & collaboration',   status: 'Daily use' },
   { name: 'Android Logcat', icon: '🪵', desc: 'Debug logging & crash analysis',    status: 'Daily use' },
-  { name: 'Git Bisect',     icon: '🔍', desc: 'Bug regression tracking',           status: 'Version control' },
+  { name: 'Figma',          icon: '🎨', desc: 'UI/UX design & prototyping',        status: 'Used in projects' },
 ];
 
-const testCases = [
-  { id: 'TC-001', title: 'User Login Validation',          type: 'Functional',     status: '✅ Pass',        steps: 3 },
-  { id: 'TC-002', title: 'Movie Booking Boundary Test',    type: 'Boundary Value', status: '✅ Pass',        steps: 5 },
-  { id: 'TC-003', title: 'API Response Null Handling',     type: 'Negative Test',  status: '🔴 Fail → Fixed', steps: 4 },
-  { id: 'TC-004', title: 'DB Connection Timeout',          type: 'Performance',    status: '⚠️ Reviewed',    steps: 2 },
+const practiceHighlights = [
+  { id: 'P-001', title: 'MVC Architecture Design',         type: 'Architecture',   status: '✅ Applied',       steps: 4 },
+  { id: 'P-002', title: 'JWT Auth & Session Management',   type: 'Security',       status: '✅ Implemented',   steps: 5 },
+  { id: 'P-003', title: 'REST API Design & Integration',   type: 'Backend',        status: '✅ Production',    steps: 6 },
+  { id: 'P-004', title: 'Responsive UI with Tailwind',     type: 'Frontend',       status: '✅ All Projects',  steps: 3 },
 ];
 
 function QASkillCard({ skill, index }) {
@@ -56,28 +56,27 @@ export default function QA() {
 
       <div className="container-width">
         <SectionHeader
-          label="Quality Assurance"
-          title="QA & Testing"
-          subtitle="Building software that works — and proving it. Quality at every layer."
+          label="Engineering"
+          title="How I Build Software"
+          subtitle="Clean architecture, reliable APIs, quality code — engineering practices applied across every project."
         />
 
-        {/* QA philosophy banner */}
+        {/* Engineering philosophy banner */}
         <FadeInUp delay={0.1} className="mb-12">
           <div className="p-6 sm:p-8 rounded-2xl border dark:border-teal-500/20 border-teal-200
             dark:bg-teal-500/[0.04] bg-teal-50 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 opacity-10 bg-teal-400 rounded-full blur-2xl" />
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <div className="text-4xl">🎯</div>
+              <div className="text-4xl">⚙️</div>
               <div>
                 <h3 className="font-display font-bold text-xl dark:text-white text-gray-900 mb-1">
-                  QA Philosophy
+                  Engineering Mindset
                 </h3>
                 <p className="dark:text-gray-300 text-gray-700 text-sm leading-relaxed max-w-2xl">
-                  Quality isn't a phase — it's a mindset embedded throughout the development lifecycle.
-                  I believe in{' '}
-                  <span className="text-teal-600 dark:text-teal-400 font-semibold">shift-left testing</span>,
-                  proactive bug prevention, and ensuring software behaves correctly under all conditions,
-                  not just happy paths.
+                  Good software isn't just working code — it's{' '}
+                  <span className="text-teal-600 dark:text-teal-400 font-semibold">maintainable, scalable, and secure</span>.
+                  I approach every project with structured architecture, clean separation of concerns,
+                  thorough testing, and a focus on building systems that hold up in the real world.
                 </p>
               </div>
             </div>
@@ -97,32 +96,32 @@ export default function QA() {
             <div className="rounded-2xl dark:bg-white/[0.02] bg-white border dark:border-white/5 border-gray-100 overflow-hidden shadow-sm">
               <div className="flex items-center justify-between px-6 py-4 border-b dark:border-white/5 border-gray-100">
                 <div className="flex items-center gap-3">
-                  <span className="text-xl">📋</span>
+                  <span className="text-xl">⚙️</span>
                   <div>
-                    <h3 className="font-display font-bold dark:text-white text-gray-900">Sample Test Cases</h3>
-                    <p className="text-xs dark:text-gray-500 text-gray-400">Placeholder — real test docs on request</p>
+                    <h3 className="font-display font-bold dark:text-white text-gray-900">Engineering Practices</h3>
+                    <p className="text-xs dark:text-gray-500 text-gray-400">Applied across real-world projects</p>
                   </div>
                 </div>
                 <span className="px-2.5 py-1 rounded-full bg-teal-100 dark:bg-teal-500/10 text-teal-700 dark:text-teal-400 text-xs font-semibold border dark:border-teal-500/20 border-teal-200">
-                  {testCases.length} cases
+                  {practiceHighlights.length} practices
                 </span>
               </div>
               <div className="divide-y dark:divide-white/5 divide-gray-50">
-                {testCases.map((tc, i) => (
+                {practiceHighlights.map((item, i) => (
                   <motion.div
-                    key={tc.id}
+                    key={item.id}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.08 }}
                     className="flex items-center gap-4 px-6 py-4 dark:hover:bg-white/[0.02] hover:bg-gray-50 transition-colors duration-200"
                   >
-                    <span className="font-mono text-xs text-primary-600 dark:text-primary-400 font-bold w-16 flex-shrink-0">{tc.id}</span>
+                    <span className="font-mono text-xs text-primary-600 dark:text-primary-400 font-bold w-16 flex-shrink-0">{item.id}</span>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium dark:text-gray-200 text-gray-800 truncate">{tc.title}</p>
-                      <p className="text-xs dark:text-gray-500 text-gray-400">{tc.type} · {tc.steps} steps</p>
+                      <p className="text-sm font-medium dark:text-gray-200 text-gray-800 truncate">{item.title}</p>
+                      <p className="text-xs dark:text-gray-500 text-gray-400">{item.type} · {item.steps} steps</p>
                     </div>
-                    <span className="text-xs font-medium flex-shrink-0 dark:text-gray-300 text-gray-700">{tc.status}</span>
+                    <span className="text-xs font-medium flex-shrink-0 dark:text-gray-300 text-gray-700">{item.status}</span>
                   </motion.div>
                 ))}
               </div>
@@ -133,9 +132,9 @@ export default function QA() {
           <FadeInUp delay={0.3}>
             <div className="rounded-2xl dark:bg-white/[0.02] bg-white border dark:border-white/5 border-gray-100 shadow-sm">
               <div className="flex items-center gap-3 px-6 py-4 border-b dark:border-white/5 border-gray-100">
-                <span className="text-xl">🐛</span>
+                <span className="text-xl">🛠️</span>
                 <div>
-                  <h3 className="font-display font-bold dark:text-white text-gray-900">Testing Tools</h3>
+                  <h3 className="font-display font-bold dark:text-white text-gray-900">Dev & Testing Tools</h3>
                   <p className="text-xs dark:text-gray-500 text-gray-400">Tools used across projects and internship</p>
                 </div>
               </div>
@@ -163,17 +162,18 @@ export default function QA() {
                 ))}
               </div>
 
-              {/* Bug example */}
+              {/* Engineering insight */}
               <div className="mx-4 mb-4 p-4 rounded-xl border-dashed border-2 dark:border-primary-500/20 border-primary-200 dark:bg-primary-500/[0.04] bg-primary-50">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-lg">💡</span>
-                  <p className="text-sm font-semibold dark:text-primary-300 text-primary-700">Real Bug Example</p>
+                  <p className="text-sm font-semibold dark:text-primary-300 text-primary-700">Engineering Insight</p>
                 </div>
                 <p className="text-xs dark:text-gray-400 text-gray-600 leading-relaxed">
-                  <span className="font-mono dark:text-rose-400 text-rose-600">[DailyWell]</span> NullPointerException
-                  when a habit was deleted while a reminder was still scheduled — fixed by adding lifecycle-aware cleanup
-                  in{' '}
-                  <span className="font-mono dark:text-teal-400 text-teal-600">HabitViewModel.onCleared()</span>.
+                  <span className="font-mono dark:text-rose-400 text-rose-600">[Vertex]</span> Resolved a race condition in
+                  live resource availability updates by debouncing API calls and syncing state with
+                  {' '}
+                  <span className="font-mono dark:text-teal-400 text-teal-600">useEffect cleanup functions</span>, ensuring
+                  accurate real-time data without redundant network requests.
                 </p>
               </div>
             </div>

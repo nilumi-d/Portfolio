@@ -11,18 +11,18 @@ export const personal = {
   portfolio: "https://nilumi-d.github.io/Portfolio",
   cvUrl: "#", // Replace with actual CV URL
   initials: "ND",
-  about: `I'm Nilumi Dakshika, an IT undergraduate at SLIIT with a CGPA of 3.9 and hands-on experience in full-stack web and mobile application development.
+  about: `I'm Nilumi Dakshika, a Software Engineering undergraduate at SLIIT with a CGPA of 3.9 and hands-on experience building full-stack web and mobile applications.
 
-I have worked on real-world academic projects using technologies such as React, Next.js, Spring Boot, Node.js, Express.js, Kotlin, MySQL, MongoDB, and PostgreSQL. My project experience includes building RESTful APIs, admin dashboards, resource booking systems, job management workflows, inventory tracking modules, and Android mobile applications.
+I design and develop end-to-end software solutions — from responsive React and Next.js frontends to Spring Boot and Node.js backends, Android apps with Kotlin, and database-driven systems with MySQL, MongoDB, and PostgreSQL. I've led teams, owned modules independently, and integrated technologies like JWT authentication, REST APIs, Gemini AI, and ORM frameworks in real-world academic projects.
 
-I enjoy creating responsive user interfaces, connecting frontend and backend systems, debugging issues, and developing practical software solutions through collaborative team projects.`,
+I write clean, maintainable code and care about software quality — applying testing practices, structured debugging, and thoughtful architecture to build systems that are reliable and scalable.`,
 };
 
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "QA", href: "#qa" },
+  { label: "Engineering", href: "#qa" },
   { label: "Experience", href: "#experience" },
   { label: "Education", href: "#education" },
   { label: "Leadership", href: "#leadership" },

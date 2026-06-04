@@ -98,7 +98,7 @@ export default function Hero() {
           className="mb-6 flex items-center gap-2 text-xl sm:text-2xl font-display font-medium"
         >
           <span className="dark:text-gray-400 text-gray-500">I am a</span>
-          <span className="gradient-text font-semibold">IT Undergraduate &amp; QA Enthusiast</span>
+          <span className="gradient-text font-semibold">IT Undergraduate &amp; Software Engineering Student</span>
         </motion.div>
 
         {/* Short intro */}
