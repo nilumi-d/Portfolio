@@ -11,11 +11,11 @@ export const personal = {
   portfolio: "https://nilumi-d.github.io/Portfolio",
   cvUrl: "#", // Replace with actual CV URL
   initials: "ND",
-  about: `I'm Nilumi Dakshika, a Software Engineering undergraduate at SLIIT with a CGPA of 3.9 and hands-on experience building full-stack web and mobile applications.
+  about: `I'm Nilumi Dakshika, an IT undergraduate at SLIIT with a CGPA of 3.9 and hands-on experience in full-stack web and mobile application development.
 
-I design and develop end-to-end software solutions — from responsive React and Next.js frontends to Spring Boot and Node.js backends, Android apps with Kotlin, and database-driven systems with MySQL, MongoDB, and PostgreSQL. I've led teams, owned modules independently, and integrated technologies like JWT authentication, REST APIs, Gemini AI, and ORM frameworks in real-world academic projects.
+I have worked on real-world academic projects using technologies such as React, Next.js, Spring Boot, Node.js, Express.js, Kotlin, MySQL, MongoDB, and PostgreSQL. My project experience includes building RESTful APIs, admin dashboards, resource booking systems, job management workflows, inventory tracking modules, and Android mobile applications.
 
-I write clean, maintainable code and care about software quality — applying testing practices, structured debugging, and thoughtful architecture to build systems that are reliable and scalable.`,
+I enjoy creating responsive user interfaces, connecting frontend and backend systems, debugging issues, and developing practical software solutions through collaborative team projects.`,
 };
 
 export const navLinks = [
@@ -104,22 +104,6 @@ export const skills = {
 export const projects = [
   {
     id: 1,
-    title: "CocoSmart",
-    subtitle: "Agricultural Management Platform",
-    description:
-      "A full-stack MERN application for coconut farming, designed to manage farm operations, inventory, and vehicle tracking. Contributed to the Inventory Management module by implementing fertilizers and insecticides tracking, supplier validation, QR-based item scanning, and automated PDF/CSV reporting.",
-    techStack: ["React", "Vite", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Leaflet", "JWT", "REST API", "Vercel"],
-    githubFrontend: "https://github.com/nilumi-d/cocosmart-frontend",
-    githubBackend: "https://github.com/nilumi-d/cocosmart-backend",
-    liveUrl: "https://cocosmart.vercel.app",
-    highlight: true,
-    category: "Full-Stack",
-    icon: "🥥",
-    color: "from-emerald-500 to-teal-600",
-    image: "/Portfolio/photos/coco.png",
-  },
-  {
-    id: 2,
     title: "Vertex",
     subtitle: "Campus Operations & Resource Booking Platform",
     description:
@@ -135,7 +119,7 @@ export const projects = [
     badge: "Team Lead",
   },
   {
-    id: 3,
+    id: 2,
     title: "HireSmart",
     subtitle: "Internship & Job Preparation Platform",
     description:
@@ -143,12 +127,28 @@ export const projects = [
     techStack: ["Next.js", "TypeScript", "tRPC", "Prisma", "PostgreSQL", "REST API", "AI Integration"],
     github: "https://github.com/chami48/Internship-and-Job-preparation-platform",
     liveUrl: null,
-    highlight: false,
+    highlight: true,
     category: "Full-Stack",
     icon: "💼",
     color: "from-indigo-500 to-violet-600",
     image: null,
     badge: "Team Lead",
+  },
+  {
+    id: 3,
+    title: "CocoSmart",
+    subtitle: "Agricultural Management Platform",
+    description:
+      "A full-stack MERN application for coconut farming, designed to manage farm operations, inventory, and vehicle tracking. Contributed to the Inventory Management module by implementing fertilizers and insecticides tracking, supplier validation, QR-based item scanning, and automated PDF/CSV reporting.",
+    techStack: ["React", "Vite", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Leaflet", "JWT", "REST API", "Vercel"],
+    githubFrontend: "https://github.com/nilumi-d/cocosmart-frontend",
+    githubBackend: "https://github.com/nilumi-d/cocosmart-backend",
+    liveUrl: "https://cocosmart.vercel.app",
+    highlight: false,
+    category: "Full-Stack",
+    icon: "🥥",
+    color: "from-emerald-500 to-teal-600",
+    image: "/Portfolio/photos/coco.png",
   },
   {
     id: 4,
