@@ -85,6 +85,7 @@ export const projects = [
     category: "Full-Stack",
     icon: "🥥",
     color: "from-emerald-500 to-teal-600",
+    image: "/Portfolio/photos/coco.png",
   },
   {
     id: 2,
@@ -99,6 +100,7 @@ export const projects = [
     category: "Web App",
     icon: "🎬",
     color: "from-rose-500 to-pink-600",
+    image: "/Portfolio/photos/SnapFlix .png",
   },
   {
     id: 3,
@@ -114,6 +116,7 @@ export const projects = [
     category: "Desktop App",
     icon: "🏫",
     color: "from-blue-500 to-indigo-600",
+    image: "/Portfolio/photos/school.png",
   },
   {
     id: 4,
@@ -128,6 +131,7 @@ export const projects = [
     category: "Mobile App",
     icon: "🌿",
     color: "from-violet-500 to-purple-600",
+    image: "/Portfolio/photos/dailywell.png",
   },
   {
     id: 5,
@@ -143,6 +147,7 @@ export const projects = [
     category: "Mobile App",
     icon: "📚",
     color: "from-amber-500 to-orange-600",
+    image: "/Portfolio/photos/Talego.png",
   },
 ];
 
