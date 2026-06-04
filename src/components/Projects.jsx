@@ -36,23 +36,40 @@ function ProjectCard({ project, index }) {
         </div>
       )}
 
-      {/* Gradient banner */}
+      {/* Image / Gradient banner */}
       <div className={`relative h-48 bg-gradient-to-br ${project.color} overflow-hidden`}>
-        <div className="absolute inset-0 opacity-20"
-          style={{
+        {/* Real project photo */}
+        {project.image && (
+          <motion.img
+            src={project.image}
+            alt={project.title}
+            animate={{ scale: isHovered ? 1.07 : 1 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
+        {/* Gradient overlay — softens photo edges and keeps text readable */}
+        <div
+          className={`absolute inset-0 ${project.image
+            ? 'bg-gradient-to-t from-black/60 via-black/10 to-transparent'
+            : 'opacity-20'}`}
+          style={!project.image ? {
             backgroundImage: `radial-gradient(circle at 30% 70%, rgba(255,255,255,0.4) 0%, transparent 50%),
                              radial-gradient(circle at 70% 30%, rgba(255,255,255,0.3) 0%, transparent 50%)`,
-          }}
+          } : undefined}
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <motion.span
-            animate={{ scale: isHovered ? 1.15 : 1 }}
-            transition={{ duration: 0.4 }}
-            className="text-6xl filter drop-shadow-lg"
-          >
-            {project.icon}
-          </motion.span>
-        </div>
+        {/* Emoji shown only when no image */}
+        {!project.image && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <motion.span
+              animate={{ scale: isHovered ? 1.15 : 1 }}
+              transition={{ duration: 0.4 }}
+              className="text-6xl filter drop-shadow-lg"
+            >
+              {project.icon}
+            </motion.span>
+          </div>
+        )}
         <div className="absolute bottom-4 left-4">
           <span className="px-3 py-1 rounded-full bg-black/30 backdrop-blur-sm text-white text-xs font-semibold border border-white/20">
             {project.category}

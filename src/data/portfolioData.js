@@ -7,7 +7,8 @@ export const personal = {
   location: "Sri Lanka",
   email: "nilumidakshika5@gmail.com",
   github: "https://github.com/nilumi-d",
-  linkedin: "https://lk.linkedin.com/in/nilumi-dakshika",
+  linkedin: "https://www.linkedin.com/in/nilumi-dakshika",
+  portfolio: "https://nilumi-d.github.io/Portfolio",
   cvUrl: "#", // Replace with actual CV URL
   initials: "ND",
   about: `I'm Nilumi Dakshika, an IT undergraduate at SLIIT with a passion for building quality software and breaking it beautifully. With a CGPA of 3.9 and consecutive Dean's List recognition, I balance strong academic performance with hands-on development experience across web, mobile, and backend systems. I care deeply about the intersection of development and quality assurance — writing clean code and ensuring it actually works the way it should. When I'm not building apps, I'm designing test cases, hunting bugs, or exploring new frameworks that make development more elegant and efficient.`,
@@ -80,14 +81,45 @@ export const projects = [
     techStack: ["React.js", "Spring Boot", "MySQL", "REST API", "Tailwind CSS"],
     githubFrontend: "https://github.com/nilumi-d/cocosmart-frontend",
     githubBackend: "https://github.com/nilumi-d/cocosmart-backend",
-    liveUrl: null,
+    liveUrl: "https://cocosmart.vercel.app",
     highlight: true,
     category: "Full-Stack",
     icon: "🥥",
     color: "from-emerald-500 to-teal-600",
+    image: "/Portfolio/photos/coco.png",
   },
   {
     id: 2,
+    title: "Vertex",
+    subtitle: "Smart Campus Management Platform",
+    description:
+      "A smart campus platform built as a group project (PAF 2026 - Group 49). Vertex centralises campus operations with modules for room booking, event management, resource tracking, and real-time notifications — making campus life seamless for students and staff.",
+    techStack: ["React.js", "Spring Boot", "MySQL", "REST API", "Tailwind CSS"],
+    github: "https://github.com/SandaniChamoda/SandaniChamoda-it3030-paf-2026-smart-campus-group49",
+    liveUrl: "https://smartcampus-mu.vercel.app",
+    highlight: true,
+    category: "Full-Stack",
+    icon: "🏛️",
+    color: "from-cyan-500 to-blue-600",
+    image: "/Portfolio/photos/vertex.png",
+  },
+  {
+    id: 3,
+    title: "HireSmart",
+    subtitle: "Internship & Job Preparation Platform",
+    description:
+      "A comprehensive web platform designed to help students and graduates prepare for internships and jobs. Features include resume building tools, mock interview practice, job listings, application tracking, and curated learning resources for career readiness.",
+    techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "REST API"],
+    github: "https://github.com/chami48/Internship-and-Job-preparation-platform",
+    liveUrl: null,
+    highlight: false,
+    category: "Full-Stack",
+    icon: "💼",
+    color: "from-indigo-500 to-violet-600",
+    image: "/Portfolio/photos/HireSmart.png",
+  },
+  {
+    id: 4,
     title: "SnapFlix",
     subtitle: "Online Movie Ticket Booking System",
     description:
@@ -99,9 +131,10 @@ export const projects = [
     category: "Web App",
     icon: "🎬",
     color: "from-rose-500 to-pink-600",
+    image: "/Portfolio/photos/SnapFlix .png",
   },
   {
-    id: 3,
+    id: 5,
     title: "SchoolSync",
     subtitle: "Online School Information Management System",
     description:
@@ -114,9 +147,10 @@ export const projects = [
     category: "Desktop App",
     icon: "🏫",
     color: "from-blue-500 to-indigo-600",
+    image: "/Portfolio/photos/school.png",
   },
   {
-    id: 4,
+    id: 6,
     title: "DailyWell",
     subtitle: "Android Wellness Tracker App",
     description:
@@ -128,9 +162,10 @@ export const projects = [
     category: "Mobile App",
     icon: "🌿",
     color: "from-violet-500 to-purple-600",
+    image: "/Portfolio/photos/dailywell.png",
   },
   {
-    id: 5,
+    id: 7,
     title: "TaleGo",
     subtitle: "Reading & Writing Mobile Application",
     description:
@@ -143,6 +178,7 @@ export const projects = [
     category: "Mobile App",
     icon: "📚",
     color: "from-amber-500 to-orange-600",
+    image: "/Portfolio/photos/Talego.png",
   },
 ];
 
