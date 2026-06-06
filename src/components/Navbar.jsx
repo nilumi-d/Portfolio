@@ -123,11 +123,12 @@ export default function Navbar() {
             {/* CV Button (desktop) */}
             <a
               href={personal.cvUrl}
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden sm:flex btn-primary text-sm py-2.5 px-5"
               id="nav-download-cv"
             >
-              Download CV
+              View CV
             </a>
 
             {/* Mobile menu button */}
@@ -170,10 +171,11 @@ export default function Navbar() {
               ))}
               <a
                 href={personal.cvUrl}
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-3 btn-primary text-sm justify-center"
               >
-                Download CV
+                View CV
               </a>
             </nav>
           </motion.div>

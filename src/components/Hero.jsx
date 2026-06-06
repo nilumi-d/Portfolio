@@ -132,12 +132,13 @@ export default function Hero() {
           </button>
           <a
             href={personal.cvUrl}
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             id="hero-download-cv"
             className="btn-secondary text-base px-8 py-4"
           >
             <ArrowDownIcon className="w-4 h-4" />
-            Download CV
+            View CV
           </a>
         </motion.div>
 

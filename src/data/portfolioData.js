@@ -9,7 +9,7 @@ export const personal = {
   github: "https://github.com/nilumi-d",
   linkedin: "https://www.linkedin.com/in/nilumi-dakshika",
   portfolio: "https://nilumi-d.github.io/Portfolio",
-  cvUrl: "#", // Replace with actual CV URL
+  cvUrl: "https://drive.google.com/file/d/1EaY_M-lVUpLyn36MJ_Wuafq6xXktQ5Db/view?usp=sharing",
   initials: "ND",
   about: `I'm Nilumi Dakshika, an IT undergraduate at SLIIT with a CGPA of 3.9 and hands-on experience in full-stack web and mobile application development.
 

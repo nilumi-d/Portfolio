@@ -22,7 +22,7 @@ const highlights = [
   {
     icon: CodeBracketIcon,
     label: 'Focus',
-    value: 'Dev + QA',
+    value: 'Full-Stack & Mobile',
     color: 'text-teal-600 dark:text-teal-400',
     bg: 'bg-teal-100 dark:bg-teal-400/10',
   },
@@ -107,7 +107,7 @@ export default function About() {
 
             <FadeInUp delay={0.3}>
               <div className="flex flex-wrap gap-2.5">
-                {['🧪 QA Testing', '⚛️ React', '☕ Java / Spring', '📱 Android', '🗄️ MySQL'].map((tag) => (
+                {['⚛️ React / Next.js', '☕ Java / Spring Boot', '🟢 Node.js', '📱 Android / Kotlin', '🗄️ MySQL / MongoDB'].map((tag) => (
                   <span key={tag} className="skill-badge">{tag}</span>
                 ))}
               </div>
