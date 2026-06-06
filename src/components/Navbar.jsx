@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon, DocumentArrowDownIcon } from '@heroicons/react/24/outline';
 import { useTheme } from '../context/ThemeContext';
 import { useScrollSpy } from '../hooks/useScroll';
 import { navLinks, personal } from '../data/portfolioData';
@@ -125,9 +125,10 @@ export default function Navbar() {
               href={personal.cvUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:flex btn-primary text-sm py-2.5 px-5"
+              className="hidden sm:flex items-center gap-2 btn-primary text-sm py-2.5 px-5 group"
               id="nav-download-cv"
             >
+              <DocumentArrowDownIcon className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
               View CV
             </a>
 
@@ -173,8 +174,9 @@ export default function Navbar() {
                 href={personal.cvUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 btn-primary text-sm justify-center"
+                className="mt-3 btn-primary text-sm justify-center flex items-center gap-2 group"
               >
+                <DocumentArrowDownIcon className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
                 View CV
               </a>
             </nav>

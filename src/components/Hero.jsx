@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDownIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
+import { ArrowTopRightOnSquareIcon, DocumentArrowDownIcon } from '@heroicons/react/24/outline';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import { personal } from '../data/portfolioData';
 
@@ -135,9 +135,9 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             id="hero-download-cv"
-            className="btn-secondary text-base px-8 py-4"
+            className="btn-secondary text-base px-8 py-4 group"
           >
-            <ArrowDownIcon className="w-4 h-4" />
+            <DocumentArrowDownIcon className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
             View CV
           </a>
         </motion.div>
