@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { useTheme } from './context/ThemeContext';
+import PageLoader from './components/PageLoader';
 import ScrollProgress from './components/ScrollProgress';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -19,33 +21,49 @@ export default function App() {
   // We only use the hook to ensure reactivity.
   useTheme();
 
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <>
-      <MouseGlow />
-      {/* Scroll progress bar */}
-      <ScrollProgress />
+      {/* Loading screen — unmounts itself after exit animation */}
+      <PageLoader onDone={() => setIsLoading(false)} />
 
-      {/* Navigation */}
-      <Navbar />
+      {/* Main site — hidden (not removed) while loader plays to avoid layout flash */}
+      <div
+        aria-hidden={isLoading}
+        style={{
+          opacity: isLoading ? 0 : 1,
+          pointerEvents: isLoading ? 'none' : 'auto',
+          transition: 'opacity 0.3s ease',
+        }}
+      >
+        <MouseGlow />
+        {/* Scroll progress bar */}
+        <ScrollProgress />
 
-      {/* Main content */}
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <QA />
-        <Experience />
-        <Education />
-        <Leadership />
-        <Contact />
-      </main>
+        {/* Navigation */}
+        <Navbar />
 
-      {/* Footer */}
-      <Footer />
-      
-      {/* Scroll to Top FAB */}
-      <ScrollToTop />
+        {/* Main content */}
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <QA />
+          <Experience />
+          <Education />
+          <Leadership />
+          <Contact />
+        </main>
+
+        {/* Footer */}
+        <Footer />
+
+        {/* Scroll to Top FAB */}
+        <ScrollToTop />
+      </div>
     </>
   );
 }
+
