@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowTopRightOnSquareIcon, DocumentArrowDownIcon } from '@heroicons/react/24/outline';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import { personal } from '../data/portfolioData';
-import heroImg from '../assets/hero.png';
+import heroImg from '../assets/profile.png';
 
 // Floating orb — adapts opacity per mode
 const FloatingOrb = ({ className, delay = 0 }) => (
