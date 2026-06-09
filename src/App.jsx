@@ -46,7 +46,7 @@ export default function App() {
 
         {/* Main content */}
         <main>
-          <Hero />
+          <Hero key={isLoading ? 'loading' : 'ready'} />
           <About />
           <Skills />
           <Projects />
