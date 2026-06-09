@@ -1,8 +1,25 @@
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
+import { useEffect } from 'react';
 import { ArrowTopRightOnSquareIcon, DocumentArrowDownIcon } from '@heroicons/react/24/outline';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
-import { personal } from '../data/portfolioData';
+import { personal, projects, skills } from '../data/portfolioData';
 import heroImg from '../assets/profile.png';
+
+// Animated counter — counts up from 0 to `to` on mount
+function AnimatedCount({ to, duration = 1.6, delay = 0 }) {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (v) => Math.round(v));
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      const controls = animate(count, to, { duration, ease: 'easeOut' });
+      return controls.stop;
+    }, delay * 1000);
+    return () => clearTimeout(timeout);
+  }, [count, to, duration, delay]);
+
+  return <motion.span>{rounded}</motion.span>;
+}
 
 // Floating orb — adapts opacity per mode
 const FloatingOrb = ({ className, delay = 0 }) => (
@@ -17,6 +34,16 @@ export default function Hero() {
   const handleViewProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  // ── Derived stats (auto-updates when data arrays change) ──
+  const projectCount = projects.length;
+  const techCount = Object.values(skills).reduce((sum, arr) => sum + arr.length, 0);
+
+  const stats = [
+    { value: projectCount, suffix: '+', label: 'Projects Built', color: 'from-primary-400 to-accent-400', delay: 0.8 },
+    { value: techCount,    suffix: '+', label: 'Technologies',   color: 'from-accent-400 to-teal-400',   delay: 1.0 },
+    { value: 4,            suffix: '×', label: "Dean's List",    color: 'from-teal-400 to-primary-400',  delay: 1.2 },
+  ];
 
   const socialLinks = [
     { href: personal.github,            icon: FiGithub,   label: 'GitHub' },
@@ -116,6 +143,39 @@ export default function Hero() {
               and full-stack developer from{' '}
               <span className="text-teal-600 dark:text-teal-400 font-medium">🇱🇰 Sri Lanka</span>.
             </motion.p>
+
+            {/* ── Stats strip ──────────────────────────────── */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.55 }}
+              className="mb-9 w-full max-w-sm rounded-2xl p-px
+                bg-gradient-to-r from-primary-500/25 via-accent-500/20 to-teal-500/25"
+            >
+              <div className="flex items-stretch gap-0 rounded-[15px] overflow-hidden
+                dark:bg-[#080b14] bg-white backdrop-blur-sm"
+              >
+                {stats.map(({ value, suffix, label, color, delay }, i) => (
+                  <div
+                    key={label}
+                    className={`flex-1 flex flex-col items-center justify-center py-4 px-2
+                      ${
+                        i < stats.length - 1
+                          ? 'border-r border-primary-500/10 dark:border-primary-500/15'
+                          : ''
+                      }`}
+                  >
+                    <p className={`font-display font-bold text-2xl bg-gradient-to-r ${color} bg-clip-text text-transparent leading-none mb-0.5`}>
+                      <AnimatedCount to={value} delay={delay} />
+                      {suffix}
+                    </p>
+                    <p className="text-[10px] font-medium dark:text-gray-500 text-gray-400 tracking-wide uppercase">
+                      {label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
 
             {/* CTA Buttons */}
             <motion.div
