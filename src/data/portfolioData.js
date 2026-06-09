@@ -131,7 +131,7 @@ export const projects = [
     category: "Full-Stack",
     icon: "💼",
     color: "from-indigo-500 to-violet-600",
-    image: null,
+    image: "/Portfolio/photos/HireSmart.png",
     badge: "Team Lead",
   },
   {
