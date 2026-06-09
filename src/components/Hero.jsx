@@ -79,10 +79,33 @@ export default function Hero() {
 
       {/* ── Content ────────────────────────────────────────── */}
       <div className="container-width section-padding relative z-10 pt-28 pb-24">
-        <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-20">
+
+          {/* ── Mobile-only: Name shown ABOVE profile picture ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            className="block lg:hidden order-1 text-center"
+          >
+            <h1 className="font-display font-bold text-5xl sm:text-6xl mb-4 leading-tight">
+              <span className="dark:text-white text-gray-900">Hi, I'm </span>
+              <span className="gradient-text">Nilumi</span>
+              <br />
+              <span className="dark:text-white text-gray-900">Dakshika</span>
+              <motion.span
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.9, type: 'spring', stiffness: 200 }}
+                className="inline-block ml-3 text-4xl sm:text-5xl"
+              >
+                👋
+              </motion.span>
+            </h1>
+          </motion.div>
 
           {/* ── LEFT: Text content ─────────────────────────── */}
-          <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1">
+          <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-3 lg:order-1">
 
             {/* Status badge */}
             <motion.div
@@ -105,7 +128,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="font-display font-bold text-5xl sm:text-6xl md:text-7xl mb-4 leading-tight"
+              className="hidden lg:block font-display font-bold text-5xl sm:text-6xl md:text-7xl mb-4 leading-tight"
             >
               <span className="dark:text-white text-gray-900">Hi, I'm </span>
               <span className="gradient-text">Nilumi</span>
@@ -241,7 +264,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 60, scale: 0.9 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="flex-shrink-0 order-1 lg:order-2 flex justify-center"
+            className="flex-shrink-0 order-2 lg:order-2 flex justify-center"
           >
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
 
