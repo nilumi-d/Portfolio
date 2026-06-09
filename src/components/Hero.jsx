@@ -37,7 +37,9 @@ export default function Hero() {
 
   // ── Derived stats (auto-updates when data arrays change) ──
   const projectCount = projects.length;
-  const techCount = Object.values(skills).reduce((sum, arr) => sum + arr.length, 0);
+  const techCount = Object.entries(skills)
+    .filter(([key]) => key !== 'Tools' && key !== 'Concepts')
+    .reduce((sum, [, arr]) => sum + arr.length, 0);
 
   const stats = [
     { value: projectCount, suffix: '+', label: 'Projects Built', color: 'from-primary-400 to-accent-400', delay: 0.8 },
