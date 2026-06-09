@@ -300,7 +300,7 @@ export default function Hero() {
                   text-xs font-semibold dark:text-gray-200 text-gray-800 shadow-lg
                   flex items-center gap-1.5"
               >
-                🏆 <span>Dean's List</span>
+                🐞🔍 <span>QA enthusiast</span>
               </motion.div>
 
               {/* Floating badge — bottom left */}
@@ -312,7 +312,7 @@ export default function Hero() {
                   text-xs font-semibold dark:text-gray-200 text-gray-800 shadow-lg
                   flex items-center gap-1.5"
               >
-                ⭐ <span>CGPA 3.90</span>
+                ⭐ <span>CGPA 3.89</span>
               </motion.div>
 
               {/* Floating badge — left middle */}

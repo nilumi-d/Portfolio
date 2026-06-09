@@ -8,7 +8,7 @@ const highlights = [
   {
     icon: AcademicCapIcon,
     label: 'CGPA',
-    value: '3.90 / 4.00',
+    value: '3.89 / 4.00',
     color: 'text-amber-500 dark:text-amber-400',
     bg: 'bg-amber-100 dark:bg-amber-400/10',
   },

@@ -11,7 +11,7 @@ export const personal = {
   portfolio: "https://nilumi-d.github.io/Portfolio",
   cvUrl: "https://drive.google.com/file/d/1EaY_M-lVUpLyn36MJ_Wuafq6xXktQ5Db/view?usp=sharing",
   initials: "ND",
-  about: `I'm Nilumi Dakshika, an IT undergraduate at SLIIT with a CGPA of 3.9 and hands-on experience in full-stack web and mobile application development.
+  about: `I'm Nilumi Dakshika, an IT undergraduate at SLIIT with a CGPA of 3.89 and hands-on experience in full-stack web and mobile application development.
 
 I have worked on real-world academic projects using technologies such as React, Next.js, Spring Boot, Node.js, Express.js, Kotlin, MySQL, MongoDB, and PostgreSQL. My project experience includes building RESTful APIs, admin dashboards, resource booking systems, job management workflows, inventory tracking modules, and Android mobile applications.
 
@@ -317,11 +317,11 @@ export const education = [
     institution: "Sri Lanka Institute of Information Technology (SLIIT)",
     degree: "Bachelor of Science (Hons) in Information Technology",
     period: "2023 – Present",
-    cgpa: "3.90",
+    cgpa: "3.89",
     highlight: true,
     achievements: [
       "Dean's List — 4 Consecutive Semesters",
-      "CGPA: 3.90 / 4.00",
+      "CGPA: 3.89 / 4.00",
       "Faculty of Computing",
     ],
     modules: [
@@ -348,12 +348,12 @@ export const achievements = [
     color: "from-amber-400 to-yellow-500",
   },
   {
-    title: "CGPA 3.90",
+    title: "CGPA 3.89",
     subtitle: "Faculty of Computing",
     description:
-      "Maintaining an exceptional CGPA of 3.90 out of 4.00, demonstrating consistency and depth across technical and theoretical subjects.",
+      "Maintaining an exceptional CGPA of 3.89 out of 4.00, demonstrating consistency and depth across technical and theoretical subjects.",
     icon: "⭐",
-    stat: "3.90",
+    stat: "3.89",
     statLabel: "out of 4.00",
     color: "from-primary-400 to-accent-500",
   },
