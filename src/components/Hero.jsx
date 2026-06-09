@@ -320,8 +320,8 @@ export default function Hero() {
                 animate={{ x: [0, -8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
                 className="absolute top-1/2 -translate-y-1/2 -left-8 px-2.5 py-1.5 rounded-lg z-10
-                  dark:bg-primary-500/20 bg-primary-100 dark:border dark:border-primary-500/30 border border-primary-200
-                  text-xs font-semibold dark:text-primary-300 text-primary-700 shadow-md
+                  dark:bg-[#0d1120] bg-white dark:border dark:border-white/10 border border-gray-200
+                  text-xs font-semibold dark:text-gray-200 text-gray-800 shadow-md
                   flex items-center gap-1"
               >
                 💻 <span>Full-Stack</span>
