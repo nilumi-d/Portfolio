@@ -162,11 +162,10 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="max-w-xl text-base sm:text-lg dark:text-gray-400 text-gray-600 leading-relaxed mb-9"
             >
-              IT undergraduate at{' '}
+              Studying at{' '}
               <span className="text-primary-600 dark:text-primary-400 font-medium">SLIIT</span>{' '}
-              with a passion for building quality software. Dean's List achiever, QA enthusiast,
-              and full-stack developer from{' '}
-              <span className="text-teal-600 dark:text-teal-400 font-medium">Sri Lanka</span>.
+              with a passion for building quality software. Dean's List achiever and full-stack developer from{' '}
+              <span className="text-teal-600 dark:text-teal-400 font-medium">🇱🇰 Sri Lanka</span>.
             </motion.p>
 
             {/* ── Stats strip ──────────────────────────────── */}
