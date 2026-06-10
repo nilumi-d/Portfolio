@@ -6,9 +6,9 @@ import { qaSkills } from '../data/portfolioData';
 const toolPlaceholders = [
   { name: 'Postman',        icon: '📮', desc: 'API testing & validation',          status: 'Used extensively' },
   { name: 'JUnit 5',        icon: '🔬', desc: 'Unit testing framework',            status: 'Active experience' },
-  { name: 'Espresso',       icon: '📱', desc: 'Android UI automation',             status: 'Mobile projects' },
+  { name: 'Playwright',      icon: '🎭', desc: 'End-to-end automated testing',      status: 'Used in projects' },
   { name: 'Git & GitHub',   icon: '🌿', desc: 'Version control & collaboration',   status: 'Daily use' },
-  { name: 'Android Logcat', icon: '🪵', desc: 'Debug logging & crash analysis',    status: 'Daily use' },
+  { name: 'SDLC',           icon: '🔄', desc: 'Structured dev lifecycle & QA',     status: 'All projects' },
   { name: 'Figma',          icon: '🎨', desc: 'UI/UX design & prototyping',        status: 'Used in projects' },
 ];
 

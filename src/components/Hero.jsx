@@ -152,7 +152,9 @@ export default function Hero() {
               className="mb-5 flex flex-wrap justify-center lg:justify-start items-center gap-2 text-lg sm:text-xl font-display font-medium"
             >
               <span className="dark:text-gray-400 text-gray-500">I am a</span>
-              <span className="gradient-text font-semibold">IT Undergraduate &amp; Software Engineering Enthusiast</span>
+              <span className="gradient-text font-semibold">IT Undergraduate</span>
+              <span className="dark:text-gray-400 text-gray-500">&amp;</span>
+              <span className="gradient-text font-semibold">Software Engineering &amp; QA Enthusiast</span>
             </motion.div>
 
             {/* Short intro */}
@@ -337,7 +339,7 @@ export default function Hero() {
                   text-xs font-semibold dark:text-gray-200 text-gray-800 shadow-lg
                   flex items-center gap-1.5"
               >
-                ⭐ <span>CGPA 3.89</span>
+                ⭐ <span>CGPA 3.88</span>
               </motion.div>
 
               {/* Floating badge — left middle */}
