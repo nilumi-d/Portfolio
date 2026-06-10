@@ -9,7 +9,6 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import QA from './components/QA';
 import Engineering from './components/Engineering';
-import Experience from './components/Experience';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -53,7 +52,6 @@ export default function App() {
           <Projects />
           <QA />
           <Engineering />
-          <Experience />
           <Education />
           <Leadership />
           <Contact />
