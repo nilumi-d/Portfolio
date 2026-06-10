@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon, DocumentArrowDownIcon } from '@heroicons/react/24/outline';
 import { useTheme } from '../context/ThemeContext';
 import { useScrollSpy } from '../hooks/useScroll';
 import { navLinks, personal } from '../data/portfolioData';
@@ -55,14 +55,14 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <ul className="hidden lg:flex items-center gap-1">
+          <ul className="hidden xl:flex items-center gap-0.5">
             {navLinks.map((link) => {
               const isActive = activeId === link.href.replace('#', '');
               return (
                 <li key={link.href}>
                   <button
                     onClick={() => handleNavClick(link.href)}
-                    className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    className={`relative px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                       isActive
                         ? 'dark:text-primary-400 text-primary-600'
                         : 'dark:text-gray-400 text-gray-600 dark:hover:text-primary-400 hover:text-primary-600'
@@ -123,11 +123,13 @@ export default function Navbar() {
             {/* CV Button (desktop) */}
             <a
               href={personal.cvUrl}
-              download
-              className="hidden sm:flex btn-primary text-sm py-2.5 px-5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center gap-2 btn-primary text-sm py-2.5 px-5 group"
               id="nav-download-cv"
             >
-              Download CV
+              <DocumentArrowDownIcon className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
+              View CV
             </a>
 
             {/* Mobile menu button */}
@@ -135,7 +137,7 @@ export default function Navbar() {
               id="mobile-menu-toggle"
               onClick={() => setIsMobileOpen(!isMobileOpen)}
               aria-label="Toggle mobile menu"
-              className="lg:hidden w-10 h-10 rounded-xl flex items-center justify-center
+              className="xl:hidden w-10 h-10 rounded-xl flex items-center justify-center
                 dark:bg-white/5 bg-gray-100 border dark:border-white/10 border-gray-200
                 dark:text-gray-300 text-gray-600 transition-all duration-300"
             >
@@ -153,7 +155,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-x-0 top-16 sm:top-20 z-40 dark:bg-[#090d1a]/95 bg-white/95 backdrop-blur-xl border-b dark:border-white/5 border-gray-200 shadow-xl lg:hidden"
+            className="fixed inset-x-0 top-16 sm:top-20 z-40 dark:bg-[#090d1a]/95 bg-white/95 backdrop-blur-xl border-b dark:border-white/5 border-gray-200 shadow-xl xl:hidden"
           >
             <nav className="px-4 py-6 flex flex-col gap-1">
               {navLinks.map((link) => (
@@ -170,10 +172,12 @@ export default function Navbar() {
               ))}
               <a
                 href={personal.cvUrl}
-                download
-                className="mt-3 btn-primary text-sm justify-center"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 btn-primary text-sm justify-center flex items-center gap-2 group"
               >
-                Download CV
+                <DocumentArrowDownIcon className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
+                View CV
               </a>
             </nav>
           </motion.div>
