@@ -120,7 +120,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500" />
               </span>
-              Available for opportunities
+              Available for Internships
             </motion.div>
 
             {/* Name */}
@@ -151,10 +151,8 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mb-5 flex flex-wrap justify-center lg:justify-start items-center gap-2 text-lg sm:text-xl font-display font-medium"
             >
-              <span className="dark:text-gray-400 text-gray-500">I am a</span>
-              <span className="gradient-text font-semibold">IT Undergraduate</span>
-              <span className="dark:text-gray-400 text-gray-500">&amp;</span>
-              <span className="gradient-text font-semibold">Software Engineering &amp; QA Enthusiast</span>
+              <span className="dark:text-gray-400 text-gray-500">I'm an</span>
+              <span className="gradient-text font-semibold">IT Undergraduate · Software Engineering &amp; QA Enthusiast</span>
             </motion.div>
 
             {/* Short intro */}
@@ -168,7 +166,7 @@ export default function Hero() {
               <span className="text-primary-600 dark:text-primary-400 font-medium">SLIIT</span>{' '}
               with a passion for building quality software. Dean's List achiever, QA enthusiast,
               and full-stack developer from{' '}
-              <span className="text-teal-600 dark:text-teal-400 font-medium">🇱🇰 Sri Lanka</span>.
+              <span className="text-teal-600 dark:text-teal-400 font-medium">Sri Lanka</span>.
             </motion.p>
 
             {/* ── Stats strip ──────────────────────────────── */}

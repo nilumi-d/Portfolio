@@ -262,14 +262,13 @@ export default function Contact() {
                   Open to Opportunities
                 </h3>
                 <p className="dark:text-gray-400 text-gray-600 leading-relaxed text-sm">
-                  I'm actively looking for internships, part-time roles, and full-time
-                  positions in software development and QA.
+                  I'm actively looking for internships and opportunities in software development and QA.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-4 text-sm">
                 <div className="flex items-center gap-2 dark:text-gray-400 text-gray-500">
                   <MapPinIcon className="w-4 h-4 text-teal-500 shrink-0" />
-                  <span>{personal.location} — Remote Friendly</span>
+                  <span>{personal.location}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="relative flex h-2.5 w-2.5">
@@ -325,7 +324,7 @@ export default function Contact() {
                 Send a Message
               </h3>
               <p className="text-sm dark:text-gray-400 text-gray-500 mb-6">
-                I'll get back to you within 24–48 hours.
+                I'll get back to you as soon as possible.
               </p>
 
               <AnimatePresence mode="wait">
